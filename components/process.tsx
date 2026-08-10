@@ -37,6 +37,10 @@ export function Process() {
     >
       <div
         aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_100%_0%,var(--petrol)_0%,transparent_65%)] opacity-40"
+      />
+      <div
+        aria-hidden="true"
         className="absolute -top-16 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/[0.12] blur-[140px]"
       />
 
@@ -64,7 +68,7 @@ export function Process() {
         <ol className="relative mt-16 list-none space-y-12 border-l border-line pl-8 sm:pl-12">
           {steps.map((step, i) => (
             <Reveal key={step.number} as="li" delay={220 + i * 100} className="relative">
-              <span className="absolute -left-[3.25rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_24px_-4px_rgba(255,90,31,0.45)] sm:-left-[4.25rem]">
+              <span className="absolute -left-[3.25rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_24px_-4px_rgba(232,94,44,0.55)] sm:-left-[4.25rem]">
                 {step.number}
               </span>
               <h3 className="font-heading text-xl font-semibold text-paper">

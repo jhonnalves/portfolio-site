@@ -24,7 +24,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="sobre" aria-label="Sobre" className="relative overflow-hidden border-t border-line bg-ink-soft py-24 sm:py-32">
+    <section id="sobre" aria-label="Sobre" className="relative overflow-hidden border-t border-line bg-[linear-gradient(155deg,var(--ink-soft)_0%,var(--ink)_100%)] py-24 sm:py-32">
       <div
         aria-hidden="true"
         className="absolute -top-24 right-[-8%] h-[360px] w-[360px] rounded-full bg-accent/[0.08] blur-[130px]"
@@ -57,8 +57,8 @@ export function About() {
 
         <div className="mt-16 grid gap-10 border-t border-line pt-12 sm:grid-cols-3 sm:gap-8">
           {pillars.map((pillar, i) => (
-            <Reveal key={pillar.number} as="div" delay={220 + i * 90}>
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-heading text-sm font-semibold text-accent">
+            <Reveal key={pillar.number} as="div" delay={220 + i * 90} className="group">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_18px_-3px_rgba(232,94,44,0.45)] transition-shadow duration-300 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_0_26px_-2px_rgba(232,94,44,0.8)]">
                 {pillar.number}
               </span>
               <h3 className="mt-4 font-heading text-xl font-semibold text-paper">

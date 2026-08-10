@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getWhatsappLink, siteConfig } from "@/lib/site-config";
 import { Wordmark } from "@/components/wordmark";
+import { CtaButton } from "@/components/cta-button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -55,14 +56,11 @@ export function Header() {
           </ul>
         </nav>
 
-        <a
-          href={getWhatsappLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-8px_var(--accent)] md:inline-block"
-        >
-          Falar no WhatsApp
-        </a>
+        <div className="hidden md:block">
+          <CtaButton href={getWhatsappLink()} size="sm">
+            Falar no WhatsApp
+          </CtaButton>
+        </div>
 
         <button
           type="button"
@@ -109,15 +107,14 @@ export function Header() {
             ))}
           </ul>
           <div className="px-6 pb-6">
-            <a
+            <CtaButton
               href={getWhatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
+              size="sm"
               onClick={() => setOpen(false)}
-              className="block w-full rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-ink"
+              className="w-full"
             >
               Falar no WhatsApp
-            </a>
+            </CtaButton>
           </div>
         </div>
       </div>

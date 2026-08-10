@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
+import { GlassPanel } from "@/components/glass-panel";
 
 const differentiators = [
   {
@@ -73,8 +74,8 @@ export function Differentiators() {
                   : undefined
               }
             >
-              <article className="group flex h-full flex-col rounded-2xl border border-line bg-ink-soft p-8 transition-colors hover:border-accent/40">
-                <span className="font-heading text-sm font-semibold text-accent">
+              <GlassPanel as="article" className="group flex h-full flex-col">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_18px_-3px_rgba(232,94,44,0.45)] transition-shadow duration-300 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_0_26px_-2px_rgba(232,94,44,0.8)]">
                   {item.number}
                 </span>
                 <h3 className="mt-5 font-heading text-xl font-semibold text-paper">
@@ -83,7 +84,7 @@ export function Differentiators() {
                 <p className="mt-3 leading-relaxed text-stone">
                   {item.description}
                 </p>
-              </article>
+              </GlassPanel>
             </Reveal>
           ))}
         </div>

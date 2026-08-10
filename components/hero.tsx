@@ -1,5 +1,7 @@
 import { getWhatsappLink } from "@/lib/site-config";
 import { Reveal } from "@/components/reveal";
+import { GlassPanel } from "@/components/glass-panel";
+import { CtaButton } from "@/components/cta-button";
 
 const marqueeItems = [
   "Sites Institucionais",
@@ -21,28 +23,37 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(180deg,#101A2E_0%,#241A16_100%)]"
       />
+
+      {/* formas orgânicas com blur, deriva lenta e assíncrona */}
+      <div
+        aria-hidden="true"
+        className="absolute -top-32 right-[-12%] h-[420px] w-[420px] rounded-full bg-accent/35 mix-blend-screen blur-[110px] motion-safe:animate-drift-a motion-reduce:animate-none"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-24 left-[-10%] h-[320px] w-[320px] rounded-full bg-petrol/55 mix-blend-screen blur-[100px] motion-safe:animate-drift-b motion-reduce:animate-none"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute left-[38%] top-[30%] h-[260px] w-[260px] rounded-full bg-accent-dim/30 mix-blend-screen blur-[100px] motion-safe:animate-drift-c motion-reduce:animate-none"
+      />
+
       <div
         aria-hidden="true"
         className="absolute inset-0 [background-image:linear-gradient(var(--ink-line)_1px,transparent_1px),linear-gradient(90deg,var(--ink-line)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black,transparent_75%)]"
       />
-      <div
-        aria-hidden="true"
-        className="absolute -top-32 right-[-12%] h-[520px] w-[520px] rounded-full bg-accent/25 blur-[130px]"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -bottom-24 left-[-10%] h-[380px] w-[380px] rounded-full bg-accent/10 blur-[120px]"
-      />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 py-24">
-        <Reveal as="div" className="mb-7 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-1.5">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-          </span>
-          <span className="text-xs font-medium uppercase tracking-[0.18em] text-stone">
-            Disponível para novos projetos
-          </span>
+        <Reveal as="div" className="mb-7 w-fit">
+          <GlassPanel as="div" variant="pill">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-stone">
+              Disponível para novos projetos
+            </span>
+          </GlassPanel>
         </Reveal>
 
         <Reveal as="h1" delay={80} className="max-w-4xl font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-paper sm:text-6xl lg:text-[4rem]">
@@ -66,23 +77,13 @@ export function Hero() {
         </Reveal>
 
         <Reveal as="div" delay={280} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-          <a
-            href={getWhatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_var(--accent)] sm:text-base"
-          >
-            Iniciar um projeto
-          </a>
-          <a
-            href="#diferenciais"
-            className="group inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-paper transition-colors hover:border-paper/40 hover:bg-paper/[0.04] sm:text-base"
-          >
+          <CtaButton href={getWhatsappLink()}>Iniciar um projeto</CtaButton>
+          <CtaButton href="#diferenciais" variant="ghost" external={false} className="group">
             Ver diferenciais
             <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
               →
             </span>
-          </a>
+          </CtaButton>
         </Reveal>
       </div>
 

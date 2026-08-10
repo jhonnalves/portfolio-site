@@ -1,5 +1,7 @@
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
+import { GlassPanel } from "@/components/glass-panel";
+import { CtaButton } from "@/components/cta-button";
 import { getWhatsappLink } from "@/lib/site-config";
 
 export function Contact() {
@@ -27,18 +29,16 @@ export function Contact() {
           <SectionKicker number="05" label="Contato" />
         </div>
 
-        <Reveal
-          as="div"
-          delay={80}
-          className="mx-auto mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-1.5"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-          </span>
-          <span className="text-xs font-medium uppercase tracking-[0.18em] text-stone">
-            Disponível para novos projetos
-          </span>
+        <Reveal as="div" delay={80} className="mx-auto mt-8 w-fit">
+          <GlassPanel as="div" variant="pill">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:hidden" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-stone">
+              Disponível para novos projetos
+            </span>
+          </GlassPanel>
         </Reveal>
 
         <Reveal
@@ -60,14 +60,9 @@ export function Contact() {
         </Reveal>
 
         <Reveal as="div" delay={260} className="mt-10 flex justify-center">
-          <a
-            href={getWhatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-semibold text-ink transition-transform hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_var(--accent)]"
-          >
+          <CtaButton href={getWhatsappLink()} size="lg">
             Chamar no WhatsApp
-          </a>
+          </CtaButton>
         </Reveal>
 
         <Reveal

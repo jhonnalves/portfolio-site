@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
+import { GlassPanel } from "@/components/glass-panel";
 
 const services = [
   {
@@ -57,8 +58,8 @@ export function Services() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:max-w-3xl">
           {services.map((service, i) => (
             <Reveal key={service.number} as="div" delay={200 + i * 90}>
-              <article className="group relative flex h-full flex-col rounded-2xl border border-line bg-ink-soft p-8 transition-colors hover:border-accent/40">
-                <span className="font-heading text-sm font-semibold text-accent">
+              <GlassPanel as="article" className="group relative flex h-full flex-col">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_0_18px_-3px_rgba(232,94,44,0.45)] transition-shadow duration-300 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_0_26px_-2px_rgba(232,94,44,0.8)]">
                   {service.number}
                 </span>
 
@@ -83,7 +84,7 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-              </article>
+              </GlassPanel>
             </Reveal>
           ))}
         </div>

@@ -4,17 +4,19 @@
   --ink: #101a2e;
   --ink-soft: #16233b;
   --ink-deep: #0b1424;
+  --petrol: #1f3b4d;
   --ink-line: rgba(255, 255, 255, 0.12);
   --paper: #ffffff;
   --stone: #97a3b8;
-  --accent: #ff5a1f;
-  --accent-dim: #c9450f;
+  --accent: #e85e2c;
+  --accent-dim: #ca4616;
 }
 
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-deep: var(--ink-deep);
+  --color-petrol: var(--petrol);
   --color-line: var(--ink-line);
   --color-paper: var(--paper);
   --color-stone: var(--stone);
@@ -26,6 +28,9 @@
 
   --animate-marquee: marquee 28s linear infinite;
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-drift-a: drift-a 22s ease-in-out infinite alternate;
+  --animate-drift-b: drift-b 27s ease-in-out infinite alternate;
+  --animate-drift-c: drift-c 34s ease-in-out infinite alternate;
 
   @keyframes marquee {
     from {
@@ -44,6 +49,33 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes drift-a {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(-40px, 50px) scale(1.15);
+    }
+  }
+
+  @keyframes drift-b {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(50px, -30px) scale(1.1);
+    }
+  }
+
+  @keyframes drift-c {
+    from {
+      transform: translate(0, 0) scale(0.9);
+    }
+    to {
+      transform: translate(-30px, -40px) scale(1.05);
     }
   }
 }
