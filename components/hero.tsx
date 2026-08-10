@@ -16,7 +16,11 @@ export function Hero() {
       aria-label="Apresentação"
       className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-16 sm:pt-20"
     >
-      {/* fundo: grade sutil + brilho autoral (laranja único, sem gradiente roxo-azul) */}
+      {/* fundo: degradê de marca navy → marrom-alaranjado */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(180deg,#101A2E_0%,#241A16_100%)]"
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 [background-image:linear-gradient(var(--ink-line)_1px,transparent_1px),linear-gradient(90deg,var(--ink-line)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black,transparent_75%)]"

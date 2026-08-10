@@ -7,7 +7,7 @@ export function Contact() {
     <section
       id="contato"
       aria-label="Contato"
-      className="relative overflow-hidden border-t border-line py-24 sm:py-32"
+      className="relative overflow-hidden border-t border-line bg-ink-deep py-24 sm:py-32"
     >
       <div
         aria-hidden="true"
@@ -15,7 +15,11 @@ export function Contact() {
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-accent/20 blur-[130px]"
+        className="absolute -top-24 right-[-10%] h-[320px] w-[320px] rounded-full bg-accent/20 blur-[130px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-accent/35 blur-[130px]"
       />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getWhatsappLink, siteConfig } from "@/lib/site-config";
+import { Wordmark } from "@/components/wordmark";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -26,20 +27,17 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? "bg-ink/85 backdrop-blur-md border-b border-line"
+          ? "bg-ink/90 backdrop-blur-md border-b border-line"
           : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:h-20">
         <a
           href="#topo"
-          className="flex items-center gap-2 font-heading text-lg font-semibold tracking-tight text-paper"
+          className="flex items-center text-xl text-paper sm:text-2xl"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-[13px] font-bold text-ink">
-            {siteConfig.brandShort}
-          </span>
-          {siteConfig.brand}
+          <Wordmark />
         </a>
 
         <nav className="hidden md:block">
@@ -96,7 +94,7 @@ export function Header() {
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
-        <div className="overflow-hidden border-t border-line">
+        <div className="overflow-hidden border-t border-line bg-ink/90">
           <ul className="flex flex-col px-6 py-4 text-base font-medium">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>

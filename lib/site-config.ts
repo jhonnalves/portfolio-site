@@ -1,9 +1,7 @@
 // Configuração central do site. Ajuste estes valores com seus dados reais.
 
 export const siteConfig = {
-  // TODO: troque pelo seu nome ou nome da marca/agência
-  brand: "Jhonatan Dev",
-  brandShort: "JD",
+  brand: "SelucIA",
 
   // Frase de posicionamento curta usada em <title> e compartilhamentos
   tagline: "Sites e sistemas sob medida para negócios que querem crescer",

@@ -33,9 +33,14 @@ export function Process() {
     <section
       id="processo"
       aria-label="Processo"
-      className="relative border-t border-line py-24 sm:py-32"
+      className="relative overflow-hidden border-t border-line bg-ink py-24 sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div
+        aria-hidden="true"
+        className="absolute -top-16 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent/[0.12] blur-[140px]"
+      />
+
+      <div className="relative mx-auto max-w-6xl px-6">
         <SectionKicker number="03" label="Processo" />
 
         <Reveal
@@ -59,7 +64,7 @@ export function Process() {
         <ol className="relative mt-16 list-none space-y-12 border-l border-line pl-8 sm:pl-12">
           {steps.map((step, i) => (
             <Reveal key={step.number} as="li" delay={220 + i * 100} className="relative">
-              <span className="absolute -left-[3.25rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-ink font-heading text-sm font-semibold text-accent sm:-left-[4.25rem]">
+              <span className="absolute -left-[3.25rem] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-ink font-heading text-sm font-semibold text-accent shadow-[0_0_24px_-4px_rgba(255,90,31,0.45)] sm:-left-[4.25rem]">
                 {step.number}
               </span>
               <h3 className="font-heading text-xl font-semibold text-paper">

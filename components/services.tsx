@@ -31,7 +31,7 @@ export function Services() {
     <section
       id="servicos"
       aria-label="Serviços"
-      className="relative border-t border-line py-24 sm:py-32"
+      className="relative border-t border-line bg-ink py-24 sm:py-32"
     >
       <div className="mx-auto max-w-6xl px-6">
         <SectionKicker number="02" label="Serviços" />

@@ -24,8 +24,13 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="sobre" aria-label="Sobre" className="relative border-t border-line py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="sobre" aria-label="Sobre" className="relative overflow-hidden border-t border-line bg-ink-soft py-24 sm:py-32">
+      <div
+        aria-hidden="true"
+        className="absolute -top-24 right-[-8%] h-[360px] w-[360px] rounded-full bg-accent/[0.08] blur-[130px]"
+      />
+
+      <div className="relative mx-auto max-w-6xl px-6">
         <SectionKicker number="01" label="Sobre" />
 
         <Reveal
@@ -53,10 +58,10 @@ export function About() {
         <div className="mt-16 grid gap-10 border-t border-line pt-12 sm:grid-cols-3 sm:gap-8">
           {pillars.map((pillar, i) => (
             <Reveal key={pillar.number} as="div" delay={220 + i * 90}>
-              <span className="font-heading text-sm font-semibold text-accent">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ink font-heading text-sm font-semibold text-accent">
                 {pillar.number}
               </span>
-              <h3 className="mt-3 font-heading text-xl font-semibold text-paper">
+              <h3 className="mt-4 font-heading text-xl font-semibold text-paper">
                 {pillar.title}
               </h3>
               <p className="mt-2 leading-relaxed text-stone">

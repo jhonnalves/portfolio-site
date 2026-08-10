@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0d0c0a;
-  --ink-soft: #17140f;
-  --ink-line: rgba(245, 241, 231, 0.1);
-  --paper: #f5f1e7;
-  --stone: #9c9587;
+  --ink: #101a2e;
+  --ink-soft: #16233b;
+  --ink-deep: #0b1424;
+  --ink-line: rgba(255, 255, 255, 0.12);
+  --paper: #ffffff;
+  --stone: #97a3b8;
   --accent: #ff5a1f;
   --accent-dim: #c9450f;
 }
@@ -13,6 +14,7 @@
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-ink-deep: var(--ink-deep);
   --color-line: var(--ink-line);
   --color-paper: var(--paper);
   --color-stone: var(--stone);
