@@ -12,7 +12,8 @@ export function WhatsAppButton() {
       className="group fixed right-5 z-50 flex items-center gap-3"
       style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >
-      <span className="pointer-events-none hidden translate-x-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-sm font-medium text-paper opacity-0 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_30px_-14px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
+      {/* fundo sólido escuro: o botão flutua sobre seções claras e escuras */}
+      <span className="pointer-events-none hidden translate-x-2 rounded-full border border-white/10 bg-[#1b1030] px-3 py-1.5 text-sm font-medium text-paper opacity-0 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.7)] transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
         Fale comigo
       </span>
 

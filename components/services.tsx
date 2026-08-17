@@ -32,11 +32,15 @@ export function Services() {
     <section
       id="servicos"
       aria-label="Serviços"
-      className="relative overflow-hidden border-t border-line bg-plum-deep py-20 sm:py-28 lg:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(170deg,#3a2464_0%,#2c1b50_45%,#20143c_100%)] py-20 sm:py-28 lg:py-32"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-32 top-1/3 h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle,rgba(122,63,184,0.28)_0%,transparent_70%)] blur-[80px] sm:h-[480px] sm:w-[480px]"
+        className="pointer-events-none absolute -left-32 top-1/4 h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle,rgba(163,63,156,0.4)_0%,transparent_70%)] blur-[80px] sm:h-[520px] sm:w-[520px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 bottom-0 h-[280px] w-[280px] rounded-full bg-[radial-gradient(circle,rgba(232,94,44,0.22)_0%,transparent_70%)] blur-[80px] sm:h-[460px] sm:w-[460px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
@@ -65,24 +69,25 @@ export function Services() {
             <Reveal key={service.number} as="div" delay={200 + i * 90}>
               <GlassPanel
                 as="article"
+                tone="light"
                 className="group relative flex h-full flex-col"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-plum-soft/70 font-heading text-sm font-semibold text-accent shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_0_22px_-4px_rgba(232,94,44,0.5)] transition-shadow duration-300 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_0_30px_-2px_rgba(232,94,44,0.85)]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[linear-gradient(140deg,var(--accent-warm)_0%,var(--accent-dim)_100%)] font-heading text-sm font-semibold text-white shadow-[0_10px_22px_-8px_rgba(232,94,44,0.75)]">
                   {service.number}
                 </span>
 
-                <h3 className="mt-5 font-heading text-xl font-semibold text-paper">
+                <h3 className="mt-5 font-heading text-xl font-semibold text-ink">
                   {service.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-stone">
+                <p className="mt-3 leading-relaxed text-ink-soft">
                   {service.description}
                 </p>
 
-                <ul className="mt-6 space-y-3 border-t border-line pt-6">
+                <ul className="mt-6 space-y-3 border-t border-line-ink-soft pt-6">
                   {service.includes.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[0.9375rem] text-stone"
+                      className="flex items-start gap-2.5 text-[0.9375rem] text-ink-soft"
                     >
                       <span
                         aria-hidden="true"

@@ -9,7 +9,7 @@ export function Contact() {
     <section
       id="contato"
       aria-label="Contato"
-      className="relative overflow-hidden border-t border-line bg-[radial-gradient(ellipse_110%_80%_at_50%_100%,#33205C_0%,#1D1236_50%,#150C26_100%)] py-20 sm:py-28 lg:py-32"
+      className="relative overflow-hidden border-t border-line bg-[radial-gradient(ellipse_115%_85%_at_50%_100%,#4a2a72_0%,#2a1850_38%,#170d2a_100%)] py-20 sm:py-28 lg:py-32"
     >
       <div
         aria-hidden="true"
@@ -17,7 +17,7 @@ export function Contact() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-24 left-1/2 h-[280px] w-[340px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,94,44,0.35)_0%,rgba(163,63,156,0.2)_45%,transparent_70%)] blur-[70px] sm:h-[420px] sm:w-[680px]"
+        className="pointer-events-none absolute -bottom-24 left-1/2 h-[280px] w-[340px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(232,94,44,0.45)_0%,rgba(163,63,156,0.26)_45%,transparent_70%)] blur-[70px] sm:h-[420px] sm:w-[680px]"
       />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">

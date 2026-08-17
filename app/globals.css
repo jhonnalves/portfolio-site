@@ -17,6 +17,14 @@
   --stone: #b6a6cc; /* texto secundário sobre roxo */
   --stone-dim: #8d7dab;
 
+  /* ---- superfícies claras: o branco da marca ---- */
+  --cloud: #f6f3fb; /* seção clara, branco levemente arroxeado */
+  --mist: #ece5f7; /* seção clara alternativa, mais lavanda */
+  --ink: #2a1750; /* texto principal sobre claro (roxo, não preto) */
+  --ink-soft: #5f4f83; /* texto secundário sobre claro */
+  --line-ink: rgba(45, 27, 78, 0.14); /* borda sobre claro */
+  --line-ink-soft: rgba(45, 27, 78, 0.08);
+
   --accent: #e85e2c;
   --accent-dim: #ca4616;
   --accent-warm: #f5833f;
@@ -35,6 +43,12 @@
   --color-paper: var(--paper);
   --color-stone: var(--stone);
   --color-stone-dim: var(--stone-dim);
+  --color-cloud: var(--cloud);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line-ink: var(--line-ink);
+  --color-line-ink-soft: var(--line-ink-soft);
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
   --color-accent-warm: var(--accent-warm);
@@ -46,9 +60,9 @@
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-drift-a: drift-a 24s ease-in-out infinite alternate;
   --animate-drift-b: drift-b 29s ease-in-out infinite alternate;
-  --animate-blob-a: blob-a 11s ease-in-out infinite;
-  --animate-blob-b: blob-b 14s ease-in-out infinite;
-  --animate-glow-breathe: glow-breathe 9s ease-in-out infinite alternate;
+  --animate-blob-a: blob-a 18s ease-in-out infinite;
+  --animate-blob-b: blob-b 20s ease-in-out infinite;
+  --animate-glow-breathe: glow-breathe 14s ease-in-out infinite alternate;
 
   @keyframes marquee {
     from {
@@ -88,7 +102,9 @@
     }
   }
 
-  /* onda orgânica: só border-radius + transform (composição barata) */
+  /* onda orgânica: só border-radius + transform (composição barata).
+     O deslocamento entra no transform para o movimento ficar percebível
+     sem tocar em width/top/left. */
   @keyframes blob-a {
     0% {
       border-radius: 60% 40% 30% 70% / 70% 30% 70% 30%;
@@ -96,11 +112,11 @@
     }
     34% {
       border-radius: 30% 70% 55% 45% / 45% 60% 40% 55%;
-      transform: translate3d(0, 0, 0) rotate(5deg) scale(1.07);
+      transform: translate3d(-6%, 7%, 0) rotate(9deg) scale(1.14);
     }
     67% {
       border-radius: 50% 50% 35% 65% / 60% 45% 55% 40%;
-      transform: translate3d(0, 0, 0) rotate(-4deg) scale(0.96);
+      transform: translate3d(5%, -5%, 0) rotate(-7deg) scale(0.93);
     }
     100% {
       border-radius: 60% 40% 30% 70% / 70% 30% 70% 30%;
@@ -113,9 +129,13 @@
       border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
       transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
     }
-    50% {
+    38% {
       border-radius: 65% 35% 40% 60% / 55% 60% 40% 45%;
-      transform: translate3d(0, 0, 0) rotate(-6deg) scale(1.1);
+      transform: translate3d(7%, -6%, 0) rotate(-10deg) scale(1.16);
+    }
+    72% {
+      border-radius: 45% 55% 55% 45% / 65% 35% 65% 35%;
+      transform: translate3d(-4%, 4%, 0) rotate(6deg) scale(0.95);
     }
     100% {
       border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
@@ -185,16 +205,16 @@ body {
    se por algum motivo a animação não rodar, o logo aparece normalmente */
 .logo-part {
   display: inline-block;
-  animation: logo-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation: logo-pop 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .logo-part-2 {
-  animation-delay: 150ms;
+  animation-delay: 350ms;
 }
 
 .logo-rule {
   transform-origin: left center;
-  animation: logo-rule 0.3s cubic-bezier(0.22, 1, 0.36, 1) 350ms both;
+  animation: logo-rule 0.5s cubic-bezier(0.22, 1, 0.36, 1) 700ms both;
 }
 
 /* ---- estado inicial dos elementos observados pelo componente Reveal ---- */

@@ -83,11 +83,11 @@ export function Differentiators() {
     <section
       id="diferenciais"
       aria-label="Diferenciais"
-      className="relative overflow-hidden border-t border-line bg-plum-deep py-20 sm:py-28 lg:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#160c28_0%,#100819_55%,#140b23_100%)] py-20 sm:py-28 lg:py-32"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 bottom-0 h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle,rgba(122,63,184,0.3)_0%,transparent_70%)] blur-[80px] sm:h-[520px] sm:w-[520px]"
+        className="pointer-events-none absolute -right-32 bottom-0 h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle,rgba(122,63,184,0.34)_0%,transparent_70%)] blur-[80px] sm:h-[520px] sm:w-[520px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-6">

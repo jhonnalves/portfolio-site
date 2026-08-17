@@ -27,12 +27,12 @@ export function Hero() {
       {/* onda orgânica: border-radius + transform animados, blur estático */}
       <div
         aria-hidden="true"
-        className="absolute -right-24 -top-16 h-[300px] w-[300px] bg-[linear-gradient(135deg,var(--plum-glow)_0%,var(--magenta-glow)_48%,var(--accent)_100%)] opacity-40 blur-[48px] will-change-transform motion-safe:animate-blob-a motion-reduce:animate-none sm:-right-32 sm:h-[560px] sm:w-[560px] sm:blur-[80px]"
+        className="absolute -right-24 -top-16 h-[320px] w-[320px] bg-[linear-gradient(135deg,var(--plum-glow)_0%,var(--magenta-glow)_48%,var(--accent)_100%)] opacity-55 blur-[48px] will-change-transform motion-safe:animate-blob-a motion-reduce:animate-none sm:-right-32 sm:h-[580px] sm:w-[580px] sm:blur-[80px]"
         style={{ borderRadius: "60% 40% 30% 70% / 70% 30% 70% 30%" }}
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-28 -left-24 h-[260px] w-[260px] bg-[linear-gradient(200deg,var(--accent-dim)_0%,var(--magenta-glow)_55%,var(--plum-glow)_100%)] opacity-30 blur-[52px] will-change-transform motion-safe:animate-blob-b motion-reduce:animate-none sm:-left-28 sm:h-[460px] sm:w-[460px] sm:blur-[85px]"
+        className="absolute -bottom-28 -left-24 h-[280px] w-[280px] bg-[linear-gradient(200deg,var(--accent-dim)_0%,var(--magenta-glow)_55%,var(--plum-glow)_100%)] opacity-45 blur-[52px] will-change-transform motion-safe:animate-blob-b motion-reduce:animate-none sm:-left-28 sm:h-[480px] sm:w-[480px] sm:blur-[85px]"
         style={{ borderRadius: "40% 60% 65% 35% / 40% 45% 55% 60%" }}
       />
 
