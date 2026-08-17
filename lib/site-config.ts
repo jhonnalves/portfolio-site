@@ -1,17 +1,17 @@
 // Configuração central do site. Ajuste estes valores com seus dados reais.
 
 export const siteConfig = {
-  brand: "SelucIA",
+  brand: "Seluc.IA",
 
   // Frase de posicionamento curta usada em <title> e compartilhamentos
-  tagline: "Sites e sistemas sob medida para negócios que querem crescer",
+  tagline: "Sites sob medida para negócios que querem crescer",
 
   description:
     "Desenvolvimento de sites institucionais e landing pages para pequenos negócios que querem presença digital profissional e resultado real.",
 
   whatsappNumber: "5591988444046",
   whatsappDefaultMessage:
-    "Olá! Vi seu portfólio e gostaria de conversar sobre um projeto.",
+    "Olá! Vi o site da Seluc.IA e gostaria de conversar sobre um projeto.",
 
   // TODO: e-mail de contato público (pode ser diferente do e-mail de login)
   email: "contato@seudominio.com",

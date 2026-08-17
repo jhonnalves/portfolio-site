@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#101A2E",
+  themeColor: "#150C26",
   width: "device-width",
   initialScale: 1,
 };
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${bricolage.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink text-paper font-body">
+      <body className="min-h-full flex flex-col bg-plum-deep text-paper font-body">
         {children}
       </body>
     </html>

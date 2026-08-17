@@ -28,17 +28,18 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? "bg-ink/90 backdrop-blur-md border-b border-line"
-          : "bg-transparent border-b border-transparent"
+          ? "border-b border-line bg-[#150C26]/90 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:h-20">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <a
           href="#topo"
-          className="flex items-center text-xl text-paper sm:text-2xl"
+          aria-label="Seluc.IA — ir para o topo"
+          className="flex items-center text-[1.375rem] text-paper sm:text-2xl"
           onClick={() => setOpen(false)}
         >
-          <Wordmark />
+          <Wordmark animate />
         </a>
 
         <nav className="hidden md:block">
@@ -67,7 +68,7 @@ export function Header() {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="relative flex h-10 w-10 items-center justify-center md:hidden"
+          className="relative -mr-2 flex h-11 w-11 items-center justify-center md:hidden"
         >
           <span
             className={`absolute h-[1.5px] w-6 bg-paper transition-transform duration-300 ${
@@ -88,25 +89,25 @@ export function Header() {
       </div>
 
       <div
-        className={`grid md:hidden transition-[grid-template-rows] duration-300 ease-out ${
+        className={`grid transition-[grid-template-rows] duration-300 ease-out md:hidden ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
-        <div className="overflow-hidden border-t border-line bg-ink/90">
+        <div className="overflow-hidden border-t border-line bg-[#150C26]/95">
           <ul className="flex flex-col px-6 py-4 text-base font-medium">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-stone transition-colors hover:text-paper"
+                  className="block border-b border-white/5 py-4 text-stone transition-colors last:border-b-0 hover:text-paper"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="px-6 pb-6">
+          <div className="px-6 pb-7">
             <CtaButton
               href={getWhatsappLink()}
               size="sm"
